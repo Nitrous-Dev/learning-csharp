@@ -7,11 +7,9 @@ namespace HelloWorld
     static void Main(string[] args)
     {
       // A ton of variables.
-      string firstName = "Rohan ";
-      string lastName = "Nathawat";
+      string firstName = "Rohan ", lastName = "Nathawat";
       string fullName = firstName + lastName;
-      int favoriteNumber = 74;
-      int anotherNumber = 28;
+      int favoriteNumber = 74, anotherNumber = 28;
       char theLetter;
       bool someBool = false;
       const double doubleNumber = 5.6;
@@ -29,7 +27,7 @@ namespace HelloWorld
       // More lines of code.
       Console.Write("This is a sentence. ");
       Console.WriteLine("This is another sentence.");
-      
+
       // This area is where I tested out my variables.
       Console.WriteLine("Hello, my name is " + fullName + ".");
       Console.WriteLine(favoriteNumber + " is my favorite number.");
