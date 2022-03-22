@@ -10,9 +10,13 @@ namespace HelloWorld
       string firstName = "Rohan ", lastName = "Nathawat";
       string fullName = firstName + lastName;
       int favoriteNumber = 74, anotherNumber = 28;
+      int myNum = 46;
+      long veryLongNumber = 10000000000L;
       char theLetter;
       bool someBool = false;
-      const double doubleNumber = 5.6;
+      double d1 = 12E4D;
+      const double doubleNumber = 5.6D;
+      float floatingNumber = 7.39F;
       someBool = true;
       theLetter = 'R';
 
@@ -35,6 +39,10 @@ namespace HelloWorld
       Console.WriteLine(doubleNumber);
       Console.WriteLine(someBool);
       Console.WriteLine(favoriteNumber + anotherNumber);
+      Console.WriteLine(veryLongNumber);
+      Console.WriteLine(floatingNumber);
+      Console.WriteLine(d1);
+      Console.WriteLine(Convert.ToString(myNum));
     }
   }
 }
