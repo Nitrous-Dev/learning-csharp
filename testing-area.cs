@@ -6,6 +6,10 @@ namespace TestingArea
   {
     static void Main(string[] args)
     {
+      /* Welcome to my testing area!
+      This is a place where I can practice
+      things I learn in C#. */
+
       // A ton of variables.
       string firstName = "Rohan ", lastName = "Nathawat";
       string fullName = firstName + lastName;
@@ -24,7 +28,7 @@ namespace TestingArea
 
       // This is my first comment.
       /* This is my first
-      multi line comment.*/
+      multi line comment. */
 
       // These are my first lines of code.
       Console.WriteLine("Hello World!");
