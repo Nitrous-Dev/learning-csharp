@@ -11,9 +11,11 @@ namespace HelloWorld
       string fullName = firstName + lastName;
       int favoriteNumber = 74, anotherNumber = 28;
       int myNum = 46;
+      int myNumSecond = 39;
       long veryLongNumber = 10000000000L;
       char theLetter;
       bool someBool = false;
+      double myDouble = myNumSecond;
       double d1 = 12E4D;
       const double doubleNumber = 5.6D;
       float floatingNumber = 7.39F;
@@ -43,6 +45,7 @@ namespace HelloWorld
       Console.WriteLine(floatingNumber);
       Console.WriteLine(d1);
       Console.WriteLine(Convert.ToString(myNum));
+      Console.WriteLine(myDouble);
     }
   }
 }
