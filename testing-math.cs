@@ -23,6 +23,7 @@ namespace HelloWorld
 
       // The testing continues?!
       Console.WriteLine(math4);
+      Console.WriteLine(Convert.ToString(Math.Max(7, 74) + " ") + Convert.ToString(Math.Min(2, 5)));
     }
   }
 }
