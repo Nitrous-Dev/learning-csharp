@@ -37,7 +37,21 @@ namespace TestingArea
 
         Console.WriteLine("The dog's name is " + dog01.name + "\n");
 
-        dog01.favorite_Attack();
+        Console.WriteLine("1. Favorite Attack");
+        Console.WriteLine("2. Nothing");
+
+        int firstAttack = Convert.ToInt32(Console.ReadLine());
+
+        if (firstAttack == 1)
+        {
+            Console.WriteLine("");
+            dog01.favorite_Attack();
+        }
+        else if (firstAttack == 2)
+        {
+            Console.WriteLine("")
+            dog01.favorite_Attack();
+        }
     }
   }
 }
