@@ -8,15 +8,24 @@ namespace TestingArea
     public string color;
     public string favoriteAttack;
     private int attackSlots;
-    private int exp;
+    private double exp;
 
     public Dog(string _name, string _color, string _favoriteAttack)
     {
         name = _name;
         color = _color;
         favoriteAttack = _favoriteAttack;
-        attackSlots = 3;
-        exp = 0.25;
+        attackSlots = 5;
+        exp = 0f;
+    }
+
+    public void favorite_Attack()
+    {
+        Console.WriteLine(name + " uses " + favoriteAttack + " to attack his foes!");
+        Console.WriteLine(favoriteAttack + " used 2 attack slots!");
+
+        attackSlots -= 2;
+        exp += 0.25f;
     }
   }
 
@@ -24,9 +33,11 @@ namespace TestingArea
   {
     static void Main(string[] args)
     {
-      Dog dog01 = new Dog("");
+        Dog dog01 = new Dog("Good Dog", "Tan", "Slash");
 
-      
+        Console.WriteLine("The dog's name is " + dog01.name + "\n");
+
+        dog01.favorite_Attack();
     }
   }
 }
