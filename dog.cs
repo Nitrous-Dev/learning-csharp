@@ -5,79 +5,102 @@ namespace TestingArea
   class Dog
   {
     public string name;
-    public string color;
-    public string attack01;
-    public string attack02;
-    public string attack03;
-    private int attackSlots;
+    private string color;
+    private string attack01;
+    private string attack02;
+    private string attack03;
+    public int attackSlots;
     private double exp;
 
-    public Dog(string _name, string _color, string _attack01, string _attack02, string _attack03)
+    public Dog(string _name, string _color, string _attack01, string _attack02, string _attack03, int _attackSlots)
     {
         name = _name;
         color = _color;
         attack01 = _attack01;
         attack02 = _attack02;
         attack03 = _attack03;
-        attackSlots = 5;
+        attackSlots = _attackSlots;
         exp = 0f;
     }
 
-    public void firstAttack()
+    public void attackOneSlot()
     {
         Console.WriteLine(name + " uses " + attack01 + " to attack his foes!");
-        Console.WriteLine(attack01 + " used 2 attack slots!");
+        Console.WriteLine(attack01 + " used 1 attack slot!");
 
-        attackSlots -= 2;
-        exp += 0.25f;
+        attackSlots -= 1;
+        exp += 0.5f;
     }
 
-    public void secondAttack()
+    public void attackTwoSlots()
     {
         Console.WriteLine(name + " uses " + attack02 + " to attack his foes!");
         Console.WriteLine(attack02 + " used 2 attack slots!");
 
         attackSlots -= 2;
-        exp += 0.25f;
+        exp += 1f;
     }
 
-    public void slots()
+    public void scareOneSlot()
     {
+        Console.WriteLine(name + " uses " + attack03 + " to scare his foes!");
+        Console.WriteLine(attack02 + " used 1 attack slot!");
+
+        attackSlots -= 1;
+        exp += 0.5f;
+    }
+
+    public void regenerate()
+    {
+        Console.WriteLine(name + "took a small break to reset all of his attack slots!");
         attackSlots = 5;
     }
+
   }
 
   class Program
   {
     static void Main(string[] args)
     {
-        Dog dog01 = new Dog("Good Dog", "Tan", "Slash", "Bite", "Bark");
+        Dog dog01 = new Dog("Good Dog", "Tan", "Slash", "Bite", "Bark", 5);
 
-        Console.WriteLine("The dog's name is " + dog01.name + "\n");
+        Console.WriteLine("Your dog's name is " + dog01.name);
+        Console.WriteLine("His fur is " + dog01.color + " ,and he loves to fight!" + "\n")
 
         Console.WriteLine("1. Slash");
         Console.WriteLine("2. Bite");
         Console.WriteLine("3. Bark");
+        Console.WriteLine("4. Regenerate");
 
-        int firstAttack = Convert.ToInt32(Console.ReadLine());
+        while (dog01.attackSlots > 0)
+        {
+            int Attack01 = Convert.ToInt32(Console.ReadLine());
 
-        slots();
+            if (Attack01 == 1)
+            {
+                Console.WriteLine("\n");
+                dog01.attackOneSlot();
+            }
+            else if (Attack01 == 2)
+            {
+                Console.WriteLine("");
+                dog01.attackTwoSlots();
+            }
+            else if (Attack01 == 3)
+            {
+                Console.WriteLine("");
+                dog01.scareOneSlot();
 
-        while (attackSlots > 0)
-        {
-            if (firstAttack == 1)
-        {
-            Console.WriteLine("\n");
-            dog01.slashAttack();
-        }
-        else if (firstAttack == 2)
-        {
-            Console.WriteLine("")
-            dog01.slashAttack();
-        }
+            }
+            else if (Attack01 == 4)
+            {
+                Console.WriteLine("");
+                dog01.regenerate();
+            }
+
         }
         
-        Console.WriteLine(dog01.name + "ran out of attack slots, so he is done for today.")
+        Console.WriteLine(dog01.name + "ran out of attack slots, so he is done for today.");
 
         Console.ReadKey();
     }
