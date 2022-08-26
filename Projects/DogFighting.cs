@@ -1,11 +1,11 @@
 using System;
 
-namespace TestingArea
+namespace DogFighting
 {
   class Dog
   {
     public string name;
-    private string color;
+    public string color;
     private string attack01;
     private string attack02;
     private string attack03;
@@ -65,7 +65,7 @@ namespace TestingArea
         Dog dog01 = new Dog("Good Dog", "Tan", "Slash", "Bite", "Bark", 5);
 
         Console.WriteLine("Your dog's name is " + dog01.name);
-        Console.WriteLine("His fur is " + dog01.color + " ,and he loves to fight!" + "\n")
+        Console.WriteLine("His fur is " + dog01.color + " ,and he loves to fight!" + "\n");
 
         Console.WriteLine("1. Slash");
         Console.WriteLine("2. Bite");
@@ -100,11 +100,9 @@ namespace TestingArea
 
         }
         
-        Console.WriteLine(dog01.name + "ran out of attack slots, so he is done for today.");
+        Console.WriteLine("\n" + dog01.name + " ran out of attack slots, so he is done for today.");
 
         Console.ReadKey();
-
-        static type hi 
     }
   }
 }
