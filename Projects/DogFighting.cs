@@ -74,25 +74,25 @@ namespace TestingArea
 
         while (dog01.attackSlots > 0)
         {
-            int Attack01 = Convert.ToInt32(Console.ReadLine());
+            int Attack = Convert.ToInt32(Console.ReadLine());
 
-            if (Attack01 == 1)
+            if (Attack == 1)
             {
                 Console.WriteLine("\n");
                 dog01.attackOneSlot();
             }
-            else if (Attack01 == 2)
+            else if (Attack == 2)
             {
                 Console.WriteLine("");
                 dog01.attackTwoSlots();
             }
-            else if (Attack01 == 3)
+            else if (Attack == 3)
             {
                 Console.WriteLine("");
                 dog01.scareOneSlot();
 
             }
-            else if (Attack01 == 4)
+            else if (Attack == 4)
             {
                 Console.WriteLine("");
                 dog01.regenerate();
@@ -103,6 +103,8 @@ namespace TestingArea
         Console.WriteLine(dog01.name + "ran out of attack slots, so he is done for today.");
 
         Console.ReadKey();
+
+        static type hi 
     }
   }
 }
