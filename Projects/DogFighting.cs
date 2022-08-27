@@ -67,7 +67,6 @@ namespace DogFighting
         Console.WriteLine("Your dog's name is " + dog01.name);
         Console.WriteLine("His fur is " + dog01.color + " ,and he loves to fight!" + "\n");
 
-        Console.WriteLine("List of Moves: \n");
         Console.WriteLine("1. Slash");
         Console.WriteLine("2. Bite");
         Console.WriteLine("3. Bark");
