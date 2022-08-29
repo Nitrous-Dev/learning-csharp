@@ -12,6 +12,19 @@ namespace DogFighting
     public int attackSlots;
     private double exp;
 
+    public void createDog()
+    {
+        Console.WriteLine("Welcome to Dog Fighting!")
+        
+        Console.WriteLine("What is your dog's name?")
+        public string dog01Name = Console.ReadLine();
+
+        Console.WriteLine("What color is your dog's fur?")
+        public string dog01Color = Console.ReadLine();
+
+        Console.WriteLine("Your dog has been created!")
+    }
+
     public Dog(string _name, string _color, string _attack01, string _attack02, string _attack03, int _attackSlots)
     {
         name = _name;
@@ -62,7 +75,9 @@ namespace DogFighting
   {
     static void Main(string[] args)
     {
-        Dog dog01 = new Dog("Good Dog", "Tan", "Slash", "Bite", "Bark", 5);
+        createDog();
+
+        Dog dog01 = new Dog(dog01Name, dog01Color, "Slash", "Bite", "Bark", 5);
 
         Console.WriteLine("Your dog's name is " + dog01.name);
         Console.WriteLine("His fur is " + dog01.color + " ,and he loves to fight!" + "\n");
@@ -105,4 +120,3 @@ namespace DogFighting
         Console.ReadKey();
     }
   }
-}
