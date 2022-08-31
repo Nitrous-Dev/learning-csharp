@@ -1,6 +1,6 @@
 using System;
 
-namespace HelloWorld
+namespace TestingMath
 {
   class Program
   {
