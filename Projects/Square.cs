@@ -6,9 +6,19 @@ namespace Square
   {
     static void Main(string[] args)
     {
-        for (i = 0; i > 2; i++)
+
+
+        for (int i = 0; i > 2; i++)
         {
-            Console.WriteLine("")
+            while (i > 2)
+            {
+              Console.Write("* " );
+
+            }
+            while (i > 2)
+            {
+              Console.WriteLine("*");
+            }
         }
     }
   }
